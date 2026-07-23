@@ -32,19 +32,27 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-size: clamp(2.3rem, 8.5vw, 4.1rem);
-    line-height: 1.05;
+    line-height: 1.4;
     color: var(--cream-text);
     transform: rotate(-1.4deg);
     text-shadow: 6px 6px 0 var(--teal-dark);
   }
 
-  .underline-bar {
-    width: min(180px, 40%);
-    height: 5px;
-    margin-top: 4px;
-    background: var(--teal);
-    transform: rotate(-1deg);
+  .wordmark .word {
+    position: relative;
+    display: inline-block;
   }
+  .wordmark .word::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 5px;
+    background: var(--teal);
+  }
+  .wordmark .word:first-child::after { transform: rotate(-2.5deg); }
+  .wordmark .word:last-child::after { transform: rotate(2deg); }
 
   .patch h1 {
     margin: 0;
@@ -91,8 +99,7 @@
   <section class="hero">
     <div class="wrap">
       <div class="wordmark-wrap">
-        <h1 class="wordmark">Punk Forge</h1>
-        <div class="underline-bar"></div>
+        <h1 class="wordmark"><span class="word">Punk</span> <span class="word">Forge</span></h1>
       </div>
       <p class="tagline">DIY software, made with purpose</p>
       <p class="lede">
