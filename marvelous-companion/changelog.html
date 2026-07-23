@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Changelog — Marvelous Companion</title>
-  <style>
-    body { font-family: sans-serif; max-width: 680px; margin: 60px auto; padding: 0 20px; color: #222; }
-    a { color: #0066cc; }
-    h3 { margin-bottom: 4px; }
-    .date { color: #666; font-size: 0.9em; margin-bottom: 8px; }
-    ul { margin-top: 6px; }
-    .release { margin-bottom: 36px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog — Marvelous Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .release { margin-bottom: 32px; }
+  .release h3 { margin-bottom: 4px; color: var(--teal); }
+</style>
 </head>
 <body>
-  <h1>Changelog</h1>
-  <h2>Marvelous Companion</h2>
-  <div class="release">
-    <h3>0.1.5</h3>
-    <p class="date">July 2026 · Internal Testing (Android &amp; iOS)</p>
-    <ul>
-      <li>Figures and their decks are now combined into a single Character view — browse a character and its cards in one place</li>
-      <li>Game sets now show their characters as a row of tappable cards that jump straight to each character&rsquo;s details</li>
-      <li>Team characters (like A-Force) list their members the same way</li>
-      <li>Clearer filtering with a labeled chip that defaults to Characters</li>
-      <li>Redesigned details screen — all stats now live in a single card, set and season moved into a header pill, and tidier spacing</li>
-      <li>Fixed Hulkling&rsquo;s missing Impersonating sidebar card, corrected villain cards for some dual characters, and cleaned up stray card data</li>
-    </ul>
+
+  <div class="site-header">
+    <div class="wrap">
+      <a class="wordmark-sm" href="/">Punk Forge</a><span class="crumb">/ Changelog</span>
+    </div>
   </div>
-  <div class="release">
-    <h3>0.1.4</h3>
-    <p class="date">July 2026 · Internal Testing (Android &amp; iOS)</p>
-    <ul>
-      <li>Batman Hush is now available, with new heroes, villains, and cards to explore</li>
-      <li>Hero card abilities now show action icons instead of spelled-out text, matching the physical cards</li>
-      <li>General text and formatting cleanup across hero cards</li>
-      <li>Fix software keyboard not showing when searching</li>
-    </ul>
-  </div>
-  <div class="release">
-    <h3>0.1.3</h3>
-    <p class="date">July 2026 · Internal Testing (Android &amp; iOS)</p>
-    <ul>
-      <li>Brand new app icon</li>
-      <li>Refreshed design for the details screen, including an improved toggle for dual characters</li>
-      <li>Smoother, more predictable back gestures on newer Android versions</li>
-      <li>Under-the-hood updates to keep the app fast and current on the latest Android and iOS</li>
-    </ul>
-  </div>
-  <div class="release">
-    <h3>0.1.2</h3>
-    <p class="date">July 2026 · Internal Testing (Android &amp; iOS)</p>
-    <ul>
-      <li>Marvelous Companion is now available on iOS via TestFlight, with the same features as the Android version</li>
-      <li>About screen now displays the current app version</li>
-      <li>New feedback button — tapping it copies your version to clipboard and opens the feedback form</li>
-      <li>Support email is now a tappable link on the About screen</li>
-    </ul>
-  </div>
-  <div class="release">
-    <h3>0.1.1</h3>
-    <p class="date">June 2026 · Internal Testing</p>
-    <ul>
-      <li>Added app launcher icon</li>
-      <li>Updated support contact to support@punkforge.dev</li>
-    </ul>
-  </div>
-  <div class="release">
-    <h3>0.1.0</h3>
-    <p class="date">June 2026 · Internal Testing</p>
-    <ul>
-      <li>Browse Game Sets</li>
-      <li>Browse Heroes and Villains (decks)</li>
-      <li>Browse Figures and Components (decks)</li>
-    </ul>
-  </div>
-  <p><a href="/marvelous-companion">← Marvelous Companion</a> · <a href="/">← Punkforge</a></p>
+
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Changelog</h1>
+      <p class="tagline">Marvelous Companion</p>
+    </div>
+  </header>
+
+  <main class="prose wrap">
+    <div class="release">
+      <h3>0.1.5</h3>
+      <p class="meta">July 2026 · Internal Testing (Android &amp; iOS)</p>
+      <ul>
+        <li>Figures and their decks are now combined into a single Character view — browse a character and its cards in one place</li>
+        <li>Game sets now show their characters as a row of tappable cards that jump straight to each character&rsquo;s details</li>
+        <li>Team characters (like A-Force) list their members the same way</li>
+        <li>Clearer filtering with a labeled chip that defaults to Characters</li>
+        <li>Redesigned details screen — all stats now live in a single card, set and season moved into a header pill, and tidier spacing</li>
+        <li>Fixed Hulkling&rsquo;s missing Impersonating sidebar card, corrected villain cards for some dual characters, and cleaned up stray card data</li>
+      </ul>
+    </div>
+    <div class="release">
+      <h3>0.1.4</h3>
+      <p class="meta">July 2026 · Internal Testing (Android &amp; iOS)</p>
+      <ul>
+        <li>Batman Hush is now available, with new heroes, villains, and cards to explore</li>
+        <li>Hero card abilities now show action icons instead of spelled-out text, matching the physical cards</li>
+        <li>General text and formatting cleanup across hero cards</li>
+        <li>Fix software keyboard not showing when searching</li>
+      </ul>
+    </div>
+    <div class="release">
+      <h3>0.1.3</h3>
+      <p class="meta">July 2026 · Internal Testing (Android &amp; iOS)</p>
+      <ul>
+        <li>Brand new app icon</li>
+        <li>Refreshed design for the details screen, including an improved toggle for dual characters</li>
+        <li>Smoother, more predictable back gestures on newer Android versions</li>
+        <li>Under-the-hood updates to keep the app fast and current on the latest Android and iOS</li>
+      </ul>
+    </div>
+    <div class="release">
+      <h3>0.1.2</h3>
+      <p class="meta">July 2026 · Internal Testing (Android &amp; iOS)</p>
+      <ul>
+        <li>Marvelous Companion is now available on iOS via TestFlight, with the same features as the Android version</li>
+        <li>About screen now displays the current app version</li>
+        <li>New feedback button — tapping it copies your version to clipboard and opens the feedback form</li>
+        <li>Support email is now a tappable link on the About screen</li>
+      </ul>
+    </div>
+    <div class="release">
+      <h3>0.1.1</h3>
+      <p class="meta">June 2026 · Internal Testing</p>
+      <ul>
+        <li>Added app launcher icon</li>
+        <li>Updated support contact to support@punkforge.dev</li>
+      </ul>
+    </div>
+    <div class="release">
+      <h3>0.1.0</h3>
+      <p class="meta">June 2026 · Internal Testing</p>
+      <ul>
+        <li>Browse Game Sets</li>
+        <li>Browse Heroes and Villains (decks)</li>
+        <li>Browse Figures and Components (decks)</li>
+      </ul>
+    </div>
+  </main>
+
+  <p class="back-links wrap"><a href="/marvelous-companion">← Marvelous Companion</a> · <a href="/">← Punkforge</a></p>
+
+  <footer>
+    <div class="wrap row">
+      <span>&copy; 2026 Punk Forge</span>
+      <a href="mailto:support@punkforge.dev">support@punkforge.dev</a>
+      <a href="https://github.com/punkforge-dev">github.com/punkforge-dev</a>
+    </div>
+  </footer>
+
 </body>
 </html>

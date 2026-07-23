@@ -7,40 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
 <style>
-  :root {
-    --ink-black: #16130f;
-    --paper: #efe8d8;
-    --paper-dark: #e2d9c4;
-    --teal: #14b8a6;
-    --teal-dark: #0a4f48;
-    --orange: #d97b4a;
-    --cream-text: #f2ede1;
-    --line: rgba(242, 237, 225, 0.16);
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--ink-black);
-    color: var(--cream-text);
-    font-family: 'Space Mono', monospace;
-    line-height: 1.6;
-  }
-
-  a { color: var(--teal); }
-  a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--teal);
-    outline-offset: 3px;
-  }
-
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
   /* ---------- Hero ---------- */
 
   .hero {
@@ -90,145 +58,14 @@
     white-space: nowrap;
   }
 
-  .tagline {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-size: 1.15rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--orange);
-    margin: 0 0 26px;
-  }
+  /* ---------- Setlist (paper-section) + Forging (apps) ---------- */
 
-  .lede {
-    max-width: 60ch;
-    font-size: 1.02rem;
-    color: var(--cream-text);
-    margin: 0 0 18px;
-  }
-
-  .lede strong { color: var(--teal); }
-
-  .sticky-note {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--ink-black);
-    font-weight: 700;
-    font-size: 0.92rem;
-    padding: 14px 18px 12px;
-    margin-top: 10px;
-    transform: rotate(1.6deg);
-    box-shadow: 3px 4px 0 rgba(0,0,0,0.3);
-    max-width: 46ch;
-  }
-
-  /* ---------- Torn divider ---------- */
-
-  .torn {
-    height: 22px;
-    background: var(--paper);
-    clip-path: polygon(
-      0% 100%, 3% 30%, 7% 100%, 11% 40%, 15% 100%, 19% 20%, 23% 100%,
-      27% 45%, 31% 100%, 35% 15%, 39% 100%, 43% 35%, 47% 100%, 51% 25%,
-      55% 100%, 59% 40%, 63% 100%, 67% 20%, 71% 100%, 75% 45%, 79% 100%,
-      83% 30%, 87% 100%, 91% 15%, 95% 100%, 100% 35%, 100% 100%, 0% 100%
-    );
-  }
-
-  /* ---------- Setlist (ethos) section ---------- */
-
-  .ethos {
-    background: var(--paper);
-    color: var(--ink-black);
-    padding: 52px 0 60px;
-  }
-
-  .ethos h2, .apps h2 {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
+  .paper-section h2, .apps h2 {
     font-size: 1.7rem;
-    letter-spacing: 0.02em;
     margin: 0 0 28px;
-    text-transform: uppercase;
   }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-  @media (max-width: 540px) {
-    .cards { grid-template-columns: 1fr; }
-  }
-
-  .card {
-    background: var(--ink-black);
-    color: var(--cream-text);
-    padding: 18px 20px;
-    border: 2px solid var(--ink-black);
-  }
-  .card:nth-child(1) { transform: rotate(-1.4deg); }
-  .card:nth-child(2) { transform: rotate(1deg); }
-  .card:nth-child(3) { transform: rotate(1.6deg); }
-  .card:nth-child(4) { transform: rotate(-1deg); }
-
-  .card .mark { color: var(--teal); font-weight: 700; }
-  .card h3 {
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin: 6px 0 6px;
-  }
-  .card p { margin: 0; font-size: 0.92rem; color: rgba(242,237,225,0.8); }
-
-  /* ---------- Forging (apps) ---------- */
 
   .apps { background: var(--ink-black); padding: 56px 0 40px; }
-
-  .app-card {
-    background: var(--paper);
-    color: var(--ink-black);
-    padding: 24px 26px;
-    position: relative;
-    transform: rotate(-0.8deg);
-    box-shadow: 4px 5px 0 rgba(0,0,0,0.4);
-  }
-
-  .app-card::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 32px;
-    width: 60px;
-    height: 20px;
-    background: rgba(255,255,255,0.55);
-    transform: rotate(-4deg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
-
-  .app-card h3 {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin: 6px 0 6px;
-  }
-
-  .app-card p { margin: 0 0 14px; font-size: 0.95rem; }
-
-  .app-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 16px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .app-links a { color: var(--teal-dark); text-decoration: none; border-bottom: 2px solid var(--teal-dark); }
-  .app-links a:hover { color: var(--ink-black); border-bottom-color: var(--ink-black); }
-  .app-links a:focus-visible { outline-color: var(--ink-black); }
 
   .coming-soon {
     margin-top: 22px;
@@ -246,28 +83,6 @@
     letter-spacing: 0.06em;
   }
   .equipment span { color: rgba(242,237,225,0.75); }
-
-  /* ---------- Footer ---------- */
-
-  footer {
-    background: var(--ink-black);
-    border-top: 1px solid var(--line);
-    padding: 28px 0 48px;
-    font-size: 0.85rem;
-    color: rgba(242,237,225,0.65);
-  }
-  footer a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(20,184,166,0.4); }
-  footer a:hover { border-bottom-color: var(--teal); }
-  footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    align-items: center;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
-  }
 </style>
 </head>
 <body>
@@ -302,7 +117,7 @@
 
   <div class="torn"></div>
 
-  <section class="ethos">
+  <section class="paper-section">
     <div class="wrap">
       <h2>Liner Notes</h2>
       <div class="cards">

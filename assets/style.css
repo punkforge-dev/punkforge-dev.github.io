@@ -1,0 +1,268 @@
+/* Punk Forge shared design system — tokens, fonts, base + reusable components. */
+
+:root {
+  --ink-black: #16130f;
+  --paper: #efe8d8;
+  --paper-dark: #e2d9c4;
+  --teal: #14b8a6;
+  --teal-dark: #0a4f48;
+  --orange: #d97b4a;
+  --cream-text: #f2ede1;
+  --line: rgba(242, 237, 225, 0.16);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ink-black);
+  color: var(--cream-text);
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+}
+
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 20px;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 6px;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Site header (subpages) ---------- */
+
+.site-header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wordmark-sm {
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.25rem;
+  color: var(--cream-text);
+  text-decoration: none;
+  text-shadow: 3px 3px 0 var(--teal-dark);
+}
+.site-header .wordmark-sm:focus-visible { outline-color: var(--teal); }
+
+.site-header .crumb {
+  font-size: 0.85rem;
+  color: rgba(242, 237, 225, 0.55);
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Tagline / lede (shared with hero) ---------- */
+
+.tagline {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  margin: 0 0 26px;
+}
+
+.lede {
+  max-width: 60ch;
+  font-size: 1.02rem;
+  color: var(--cream-text);
+  margin: 0 0 18px;
+}
+
+.lede strong { color: var(--teal); }
+
+/* ---------- Sticky-note callout ---------- */
+
+.sticky-note {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--ink-black);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 14px 18px 12px;
+  margin-top: 10px;
+  transform: rotate(1.6deg);
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.3);
+  max-width: 46ch;
+}
+.sticky-note a { color: var(--ink-black); text-decoration: underline; }
+
+/* ---------- Torn-paper divider ---------- */
+
+.torn {
+  height: 22px;
+  background: var(--paper);
+  clip-path: polygon(
+    0% 100%, 3% 30%, 7% 100%, 11% 40%, 15% 100%, 19% 20%, 23% 100%,
+    27% 45%, 31% 100%, 35% 15%, 39% 100%, 43% 35%, 47% 100%, 51% 25%,
+    55% 100%, 59% 40%, 63% 100%, 67% 20%, 71% 100%, 75% 45%, 79% 100%,
+    83% 30%, 87% 100%, 91% 15%, 95% 100%, 100% 35%, 100% 100%, 0% 100%
+  );
+}
+
+/* ---------- Paper content section ---------- */
+
+.paper-section {
+  background: var(--paper);
+  color: var(--ink-black);
+  padding: 52px 0 60px;
+}
+
+/* ---------- Rotated taped cards ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+@media (max-width: 540px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--ink-black);
+  color: var(--cream-text);
+  padding: 18px 20px;
+  border: 2px solid var(--ink-black);
+  display: block;
+  text-decoration: none;
+}
+.card:nth-child(1) { transform: rotate(-1.4deg); }
+.card:nth-child(2) { transform: rotate(1deg); }
+.card:nth-child(3) { transform: rotate(1.6deg); }
+.card:nth-child(4) { transform: rotate(-1deg); }
+
+.card .mark { color: var(--teal); font-weight: 700; }
+.card h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: var(--cream-text);
+  margin: 6px 0 6px;
+}
+.card p { margin: 0; font-size: 0.92rem; color: rgba(242, 237, 225, 0.8); }
+
+/* ---------- App card (tape-strip panel) ---------- */
+
+.app-card {
+  background: var(--paper);
+  color: var(--ink-black);
+  padding: 24px 26px;
+  position: relative;
+  transform: rotate(-0.8deg);
+  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.app-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  transform: rotate(-4deg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.app-card h3 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--ink-black);
+  margin: 6px 0 6px;
+}
+
+.app-card p { margin: 0 0 14px; font-size: 0.95rem; }
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.app-links a { color: var(--teal-dark); text-decoration: none; border-bottom: 2px solid var(--teal-dark); }
+.app-links a:hover { color: var(--ink-black); border-bottom-color: var(--ink-black); }
+.app-links a:focus-visible { outline-color: var(--ink-black); }
+
+/* ---------- Readable content (prose) pages ---------- */
+
+.page-head { padding: 44px 0 8px; }
+.page-head .tagline { margin: 0 0 4px; }
+
+.prose {
+  max-width: 65ch;
+  padding: 8px 0 40px;
+}
+.prose p { margin: 0 0 16px; }
+.prose ul { margin: 6px 0 16px; padding-left: 22px; }
+.prose li { margin-bottom: 6px; }
+.prose h3 { margin-top: 30px; color: var(--cream-text); }
+.prose .meta { color: rgba(242, 237, 225, 0.6); font-size: 0.9rem; margin: 0 0 10px; }
+.prose em { color: rgba(242, 237, 225, 0.75); }
+
+.back-links {
+  padding: 10px 0 48px;
+  font-size: 0.9rem;
+}
+.back-links a { margin-right: 4px; }
+
+/* ---------- Footer ---------- */
+
+footer {
+  background: var(--ink-black);
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+  font-size: 0.85rem;
+  color: rgba(242, 237, 225, 0.65);
+}
+footer a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(20, 184, 166, 0.4); }
+footer a:hover { border-bottom-color: var(--teal); }
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
